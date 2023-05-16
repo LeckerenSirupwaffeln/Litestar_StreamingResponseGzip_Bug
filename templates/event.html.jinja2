@@ -1,0 +1,11 @@
+{% extends "base/base.html.jinja2" %}
+{% set active_page = "root" %}
+
+{% block head %}
+<script defer src="{{ url_for_static_asset('static', 'js/event.js') }}"></script>
+{% endblock head %}
+
+{% block main %}
+<button onclick="StartRetrievingData();">Start retrieving data</button>
+<button onclick="StopRetrievingData();">Stop retrieving data</button>
+{% endblock main %}

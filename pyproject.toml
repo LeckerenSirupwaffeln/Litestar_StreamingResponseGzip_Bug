@@ -1,0 +1,29 @@
+[project]
+name = "test"
+version = "0.0.0"
+description = "Test server."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = []
+
+dependencies = [
+  "litestar",
+  "litestar[jinja]",
+  "uvicorn[standard]",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-asyncio"
+]
+
+[tool.setuptools.packages.find]
+where = []
+include = []
+exclude = [] 
+namespaces = false 
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
