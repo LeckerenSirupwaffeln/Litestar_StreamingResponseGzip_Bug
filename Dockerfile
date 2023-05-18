@@ -8,14 +8,14 @@ EXPOSE 8000
 WORKDIR /TestServer
 
 # install bash
-RUN apt-get update \
-&& apt-get upgrade \
+RUN apt-get update -y \
+&& apt-get upgrade -y \
 && apt-get install -y --no-install-recommends sudo \
 && apt-get install -y --no-install-recommends bash \
 && apt-get install -y --no-install-recommends git \
 && apt-get install -y --no-install-recommends vim \
 && apt-get purge -y --auto-remove \
-&& rm -rf /var/lib/apt/lists/*
+&& rm -rf /var/lib/apt/lists/* 
 
 # copy the content of the repo to our working directory
 COPY . ./
